@@ -4,12 +4,12 @@ import { ApolloProvider } from "react-apollo";
 import client from "./services/apollo";
 
 import UserList from "./components/UserList";
-import UserFrom from "./components/UserForm";
+import UserForm from "./components/UserForm";
 
 const App = () => (
   <ApolloProvider client={client}>
     <>
-      <UserFrom />
+      <UserForm />
       <UserList />
     </>
   </ApolloProvider>

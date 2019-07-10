@@ -5,20 +5,20 @@ import gql from "graphql-tag";
 export const usersQuery = gql`
   query {
     users {
-      name
       id
+      name
       email
     }
   }
 `;
 
-export default class Userlist extends Component {
+export default class UserList extends Component {
   render() {
     return (
       <Query query={usersQuery}>
         {({ loading, error, data }) => {
-          if (loading) return <p>Carregando ...</p>;
-          if (error) return <p>Error :(</p>;
+          if (loading) return <p>Carregando...</p>;
+          if (error) return <p>Erro :(</p>;
 
           return (
             <ul>
