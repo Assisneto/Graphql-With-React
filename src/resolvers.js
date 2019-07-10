@@ -7,6 +7,7 @@ module.exports = {
   },
 
   Mutation: {
-    createUser: (source, { name, email }) => User.create({ name, email })
+    createUser: (source, { name, email }) => User.create({ name, email }),
+    deleteUser: async (souce, { id }) => await User.findByIdAndDelete(id)
   }
 };
